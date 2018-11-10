@@ -1,0 +1,29 @@
+drop table USUARIO;
+
+
+Create table usuario(id number(10) not null,
+nombre varchar2(50) not null,
+constraint usuario_pk primary key (id)
+);
+
+
+CREATE SEQUENCE seq_usuario MINVALUE 1 START WITH 151
+    INCREMENT BY 1 NOCACHE;
+
+drop sequence seq_usuario;
+
+CREATE SEQUENCE seq_usuario MINVALUE 1 START WITH 151
+    INCREMENT BY 1 CACHE 20;
+
+commit;
+
+
+//----------creacion de direccion----
+create table direccion (pk_direccion number(10) not null,
+                        comuna varchar2(50) not null,
+                        direccion varchar2(50) not null,
+                        numero number(10) not null,
+                        usuario_id number (10) not null);
+                        
+alter table direccion add constraint fk_usuario_direccion foreign key (usuario_id) references  usuario(id);
+

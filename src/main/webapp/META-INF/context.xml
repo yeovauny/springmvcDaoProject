@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Context path="/springmvc" docBase="/app" crossContext="true" reloadable="true" debug="1">
+
+<ResourceLink name="jdbc/prueba" global="jdbc/prueba" type="javax.sql.DataSource"/>
+
+<ResourceLink name="propertiesroute" global="propertiesroute" type="java.lang.String"/>
+<ResourceLink name="logging.level" global="logging.level" type="java.lang.String"/>
+<ResourceLink name="environment" global="environment" type="java.lang.String"/>
+</Context>
+
